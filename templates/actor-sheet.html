@@ -7,15 +7,43 @@
             <h1 class="charname">
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
-            <div class="resource">
-                <input type="number" name="system.health.value" value="{{systemData.health.value}}"/>
-                <span> / </span>
-                <input type="number" name="system.health.max" value="{{systemData.health.max}}"/>
+            <div class="basic-info">
+                <div class="info-field">
+                    <label class="field-label">{{systemData.basicInfo.charLevel.label}}</label>
+                    <input type="number" name="system.basicInfo.charLevel.value" value="{{systemData.basicInfo.charLevel.value}}" />
+                </div>
+                <div class="info-field">
+                    <label class="field-label">{{systemData.basicInfo.charOcc.label}}</label>
+                    <input type="text" name="system.basicInfo.charOcc.value" value="{{systemData.basicInfo.charOcc.value}}" />
+                </div>
+                <div class="info-field">
+                    <label class="field-label">{{systemData.basicInfo.charRace.label}}</label>
+                    <input type="text" name="system.basicInfo.charRace.value" value="{{systemData.basicInfo.charRace.value}}" />
+                </div>
+                <div class="info-field">
+                    <label class="field-label">{{systemData.basicInfo.charAlignment.label}}</label>
+                    <input type="text" name="system.basicInfo.charAlignment.value" value="{{systemData.basicInfo.charAlignment.value}}" />
+                </div>
+                <div class="info-field">
+                    <label class="field-label">{{systemData.basicInfo.charXp.label}}</label>
+                    <input type="number" name="system.basicInfo.charXp.value" value="{{systemData.basicInfo.charXp.value}}" />
+                </div>
             </div>
             <div class="resource">
-                <input type="number" name="system.power.value" value="{{systemData.power.value}}"/>
-                <span> / </span>
-                <input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
+                <label>{{systemData.health.charSdc.label}}</label>
+                <div>
+                    <input type="number" name="system.health.charSdc.value" value="{{systemData.health.charSdc.value}}"/>
+                    <span> / </span>
+                    <input type="number" name="system.health.charSdc.max" value="{{systemData.health.charSdc.max}}"/>
+                </div>
+            </div>
+            <div class="resource">
+                <label>{{systemData.health.charHp.label}}</label>
+                <div>
+                    <input type="number" name="system.health.charHp.value" value="{{systemData.health.charHp.value}}"/>
+                    <span> / </span>
+                    <input type="number" name="system.health.charHp.max" value="{{systemData.health.charHp.max}}"/>
+                </div>
             </div>
         </div>
     </header>

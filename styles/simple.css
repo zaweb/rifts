@@ -12,7 +12,7 @@
   height: 100%;
 }
 .rifts .sheet-header {
-  flex: 0 0 100px;
+  flex: 0 0 240px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@
 }
 .rifts .sheet-header .header-fields {
   flex: 1;
-  height: 100px;
+  height: 240px;
 }
 .rifts .sheet-header h1.charname {
   height: 50px;
@@ -40,9 +40,48 @@
   height: 100%;
   margin: 0;
 }
+.rifts .basic-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 5px 0 10px 0;
+  width: 100%;
+}
+.rifts .basic-info .info-field {
+  flex: 1 1 auto;
+  min-width: 85px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px;
+}
+.rifts .basic-info .info-field .field-label {
+  display: block !important;
+  visibility: visible !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  color: #000 !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+  padding: 3px 4px !important;
+  border-radius: 2px !important;
+  line-height: 1.2 !important;
+  min-height: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  order: 1 !important;
+}
+.rifts .basic-info .info-field input {
+  height: 26px !important;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #7a7971;
+  background: #fff;
+  padding: 2px 4px;
+  order: 2 !important;
+}
 .rifts .resource {
   width: 50%;
-  height: 40px;
+  height: 50px;
   margin-top: 10px;
   float: left;
   text-align: center;
@@ -161,7 +200,6 @@
   border-radius: 2px;
   text-align: left;
   font-weight: bold;
-  z-index: 1;
 }
 .rifts .attributes-list {
   list-style: none;

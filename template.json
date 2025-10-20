@@ -3,11 +3,49 @@
   "types": ["character"],
   "htmlFields": ["biography"],
   "character": {
+    "basicInfo": {
+      "charLevel": {
+        "value": 0,
+        "min": 0,
+        "max": 15,
+        "label": "Level",
+        "dtype": "Number"
+      },
+      "charOcc": {
+        "value": "",
+        "label": "O.C.C.",
+        "dtype": "String"
+      },
+      "charRace": {
+        "value": "",
+        "label": "Race",
+        "dtype": "String"
+      },
+      "charAlignment": {
+        "value": "",
+        "label": "Alignment",
+        "dtype": "String"
+      },
+      "charXp": {
+        "value": 0,
+        "min": 0,
+        "max": 1000000,
+        "label": "X.P.",
+        "dtype": "Number"
+      }
+    },
     "biography": "",
     "health": {
-      "value": 10,
-      "min": 0,
-      "max": 10
+      "charSdc": {
+        "label": "S.D.C.",
+        "value": 0,
+        "dtype": "Number"
+      },
+      "charHp": {
+        "label": "H.P.",
+        "value": 0,
+        "dtype": "Number"
+      }
     },
     "power": {
       "value": 5,
