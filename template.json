@@ -14,7 +14,56 @@
       "min": 0,
       "max": 5
     },
-    "attributes": {},
+    "attributes": {
+      "charIq": {
+        "value": 0,
+        "label": "I.Q.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charMe": {
+        "value": 0,
+        "label": "M.E.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charMa": {
+        "value": 0,
+        "label": "M.A.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charPs": {
+        "value": 0,
+        "label": "P.S.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charPp": {
+        "value": 0,
+        "label": "P.P.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charPe": {
+        "value": 0,
+        "label": "P.E.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charPb": {
+        "value": 0,
+        "label": "P.B.",
+        "dtype": "Number",
+        "modifier": []
+      },
+      "charSpd": {
+        "value": 0,
+        "label": "Spd.",
+        "dtype": "Number",
+        "modifier": []
+      }
+    },
     "groups": {}
   }
 },
