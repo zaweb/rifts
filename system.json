@@ -1,14 +1,14 @@
 {
-  "id": "worldbuilding",
-  "version": "0.8.2",
-  "title": "Simple World-Building",
-  "url": "https://github.com/foundryvtt/worldbuilding/",
-  "description": "A minimalist game system which provides configurable Actor and Item templates to support free-form system agnostic game-play.",
+  "id": "rifts",
+  "version": "0.0.1",
+  "title": "Rifts",
+  "url": "https://github.com/zaweb/rifts",
+  "description": "A Foundry VTT system for Rifts RPG.",
   "license": "LICENSE.txt",
   "authors": [
     {
-      "name": "Atropos",
-      "url": "https://foundryvtt.com"
+      "name": "D. Penwood",
+      "url": "https://dpenwood.com"
     }
   ],
   "esmodules": ["module/simple.js"],
@@ -36,6 +36,6 @@
   },
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "manifest": "https://raw.githubusercontent.com/foundryvtt/worldbuilding/master/system.json",
-  "download": "https://github.com/foundryvtt/worldbuilding/archive/refs/tags/release-082.zip"
+  "manifest": "",
+  "download": "https://github.com/zaweb/rifts"
 }
