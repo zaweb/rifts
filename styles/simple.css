@@ -12,7 +12,7 @@
   height: 100%;
 }
 .rifts .sheet-header {
-  flex: 0 0 240px;
+  flex: 0 0 300px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@
 }
 .rifts .sheet-header .header-fields {
   flex: 1;
-  height: 240px;
+  height: 300px;
 }
 .rifts .sheet-header h1.charname {
   height: 50px;

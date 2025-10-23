@@ -47,6 +47,18 @@
         "dtype": "Number"
       }
     },
+    "consumableAttrs": {
+      "charPpe": {
+        "label": "P.P.E.",
+        "value": 0,
+        "dtype": "Number"
+      },
+      "charIsp": {
+        "label": "I.S.P.",
+        "value": 0,
+        "dtype": "Number"
+      }
+    },
     "power": {
       "value": 5,
       "min": 0,

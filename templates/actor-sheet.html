@@ -45,6 +45,22 @@
                     <input type="number" name="system.health.charHp.max" value="{{systemData.health.charHp.max}}"/>
                 </div>
             </div>
+            <div class="resource">
+                <label>{{systemData.consumableAttrs.charPpe.label}}</label>
+                <div>
+                    <input type="number" name="system.consumableAttrs.charPpe.value" value="{{systemData.consumableAttrs.charPpe.value}}"/>
+                    <span> / </span>
+                    <input type="number" name="system.consumableAttrs.charPpe.max" value="{{systemData.consumableAttrs.charPpe.max}}"/>
+                </div>
+            </div>
+            <div class="resource">
+                <label>{{systemData.consumableAttrs.charIsp.label}}</label>
+                <div>
+                    <input type="number" name="system.consumableAttrs.charIsp.value" value="{{systemData.consumableAttrs.charIsp.value}}"/>
+                    <span> / </span>
+                    <input type="number" name="system.consumableAttrs.charIsp.max" value="{{systemData.consumableAttrs.charIsp.max}}"/>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -119,10 +135,10 @@
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <header class="attributes-header flexrow">
-                <span class="attribute-key">{{localize "SIMPLE.AttributeKey"}}</span>
-                <span class="attribute-value">{{localize "SIMPLE.AttributeValue"}}</span>
                 <span class="attribute-label">{{localize "SIMPLE.AttributeLabel"}}</span>
-                <span class="attribute-dtype">{{localize "SIMPLE.AttributeDtype"}}</span>
+                <!-- <span class="attribute-key">{{localize "SIMPLE.AttributeKey"}}</span> -->
+                <span class="attribute-value">{{localize "SIMPLE.AttributeValue"}}</span>
+                <!-- <span class="attribute-dtype">{{localize "SIMPLE.AttributeDtype"}}</span> -->
                 <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus"></i></a>
             </header>
 
