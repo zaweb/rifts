@@ -12,7 +12,7 @@
   height: 100%;
 }
 .rifts .sheet-header {
-  flex: 0 0 300px;
+  flex: 0 0 240px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -235,27 +235,56 @@
 .rifts .group-header input[type="text"]:focus::placeholder {
   opacity: 1;
 }
-.rifts .group-controls {
-  margin: 5px;
+.rifts .skills {
+  position: relative;
 }
-.rifts .groups-list {
+.rifts .skill-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.rifts .group {
+.rifts .skill .skill-key {
+  background: transparent;
+  border: none;
+}
+.rifts .skill .skill-label {
+  flex: 2;
+}
+.rifts .skill .skill-value {
+  flex: 0 0 116px;
+  margin: 0 5px;
+}
+.rifts .skill .skill-dtype {
+  height: 24px;
+  flex: 0 0 116px;
+  margin: 0 5px;
+}
+.rifts .skill .skill input[type="text"]::placeholder,
+.rifts .skill .group-header input[type="text"]::placeholder {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.rifts .skill .group-controls {
+  margin: 5px;
+}
+.rifts .skill .groups-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rifts .skill .group {
   margin: 5px 0 0;
   padding: 0;
 }
-.rifts .group-header {
+.rifts .skill .group-header {
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid #AAA;
   border-radius: 2px;
   padding: 2px 5px;
 }
-.rifts .group-key,
-.rifts .group-label {
+.rifts .skill .group-key,
+.rifts .skill .group-label {
   font-weight: bold;
   border: none;
   border-bottom: 1px solid #AAA;
@@ -263,22 +292,57 @@
   border-radius: 0;
   margin-right: 6px;
 }
-.rifts .group-key {
+.rifts .skill .group-key {
   opacity: 0.75;
 }
-.rifts .group-label {
+.rifts .skill .group-label {
   flex: 2;
 }
-.rifts .group-dtype {
+.rifts .skill .group-dtype {
   height: 24px;
   flex: 0 0 116px;
   margin: 0 5px;
 }
-.rifts.sheet.actor {
-  min-width: 560px;
-  min-height: 420px;
+.rifts .skill .skills-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 5px;
+  margin: 5px 0;
+  background: #cfcdc2;
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  text-align: left;
+  font-weight: bold;
 }
-.rifts.sheet.item {
+.rifts .skill .skill-name-header {
+  flex: 1;
+}
+.rifts .skill .skill-control {
+  flex: 0 0 20px;
+  text-align: center;
+  line-height: 28px;
+  border: none;
+}
+.rifts .skill .skill {
+  align-items: center;
+  padding: 2px 0;
+  border-bottom: 1px solid #BBB;
+}
+.rifts .skill .skill-name {
+  flex: 1;
+  margin-right: 5px;
+}
+.rifts .skill .skill-percent {
+  flex: 0 0 80px;
+  text-align: center;
+}
+.rifts .rifts.sheet.actor {
+  min-width: 700px;
+  min-height: 900px;
+}
+.rifts .rifts.sheet.item {
   min-width: 460px;
   min-height: 400px;
 }

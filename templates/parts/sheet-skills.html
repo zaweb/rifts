@@ -1,0 +1,15 @@
+<section class="skills-group">
+  <ol class="skills-list">
+      {{#each skills as |skill key|}}
+      <li class="skill flexrow" data-attribute="{{#if skill.group}}{{skill.group}}.{{/if}}{{key}}">
+          <input class="skill-key" type="hidden" name="system.skills.{{#if skill.group}}{{skill.group}}.{{/if}}{{key}}.key" value="{{key}}"/>
+          <input class="skill-label" type="text" name="system.skills.{{#if skill.group}}{{skill.group}}.{{/if}}{{key}}.label" value="{{skill.label}}"
+              placeholder="skill"/>
+          <input class="skill-value" type="text" name="system.skills.{{#if skill.group}}{{skill.group}}.{{/if}}{{key}}.value" value="{{skill.value}}"
+              data-dtype="{{skill.dtype}}" placeholder="Value"/>
+          <input type="hidden" name="system.skills.{{#if skill.group}}{{skill.group}}.{{/if}}{{key}}.group" value="{{skill.group}}" />
+          <input type="hidden" name="system.skills.{{#if skill.group}}{{skill.group}}.{{/if}}{{key}}.dtype" value="{{skill.dtype}}" />
+      </li>
+      {{/each}}
+  </ol>
+</section>

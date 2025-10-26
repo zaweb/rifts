@@ -12,8 +12,8 @@ export class RiftsActorSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["rifts", "sheet", "actor"],
       template: "systems/rifts/templates/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 700,
+      height: 900,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
       scrollY: [".biography", ".items", ".attributes"],
       dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
@@ -29,6 +29,19 @@ export class RiftsActorSheet extends ActorSheet {
     context.shorthand = !!game.settings.get("rifts", "macroShorthand");
     context.systemData = context.data.system;
     context.dtypes = ATTRIBUTE_TYPES;
+    
+    // Process skills data
+    if (!context.systemData.skills || Object.keys(context.systemData.skills).length === 0) {
+      // Initialize with default skills if none exist
+      context.systemData.skills = {
+        skill1: { name: "", percent: 0 },
+        skill2: { name: "", percent: 0 },
+        skill3: { name: "", percent: 0 }
+      };
+    }
+    console.log("Skills data:", context.systemData.skills);
+    console.log("Full systemData:", context.systemData);
+    
     context.biographyHTML = await TextEditor.enrichHTML(context.systemData.biography, {
       secrets: this.document.isOwner,
       async: true
@@ -53,6 +66,9 @@ export class RiftsActorSheet extends ActorSheet {
     // Item Controls
     html.find(".item-control").click(this._onItemControl.bind(this));
     html.find(".items .rollable").on("click", this._onItemRoll.bind(this));
+
+    // Skill Controls
+    html.find(".skill-control").click(this._onSkillControl.bind(this));
 
     // Add draggable for Macro creation
     html.find(".attributes a.attribute-roll").each((i, a) => {
@@ -107,6 +123,44 @@ export class RiftsActorSheet extends ActorSheet {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `<h2>${item.name}</h2><h3>${button.text()}</h3>`
     });
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Handle click events for Skill control buttons
+   * @param event
+   * @private
+   */
+  _onSkillControl(event) {
+    event.preventDefault();
+    const button = event.currentTarget;
+    
+    // Handle different actions
+    switch (button.dataset.action) {
+      case "create":
+        this._addNewSkill();
+        break;
+    }
+  }
+
+  /**
+   * Add a new skill to the actor
+   * @private
+   */
+  _addNewSkill() {
+    const skills = this.actor.system.skills || {};
+    const skillCount = Object.keys(skills).length;
+    const newSkillKey = `skill${skillCount + 1}`;
+    
+    const updateData = {
+      [`system.skills.${newSkillKey}`]: {
+        name: "",
+        percent: 0
+      }
+    };
+    
+    return this.actor.update(updateData);
   }
 
   /* -------------------------------------------- */

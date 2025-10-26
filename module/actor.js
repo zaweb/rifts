@@ -11,6 +11,7 @@ export class RiftsActor extends Actor {
     super.prepareDerivedData();
     this.system.groups = this.system.groups || {};
     this.system.attributes = this.system.attributes || {};
+    this.system.skills = this.system.skills || {};
     EntitySheetHelper.clampResourceValues(this.system.attributes);
   }
 

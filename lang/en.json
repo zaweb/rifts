@@ -28,7 +28,7 @@
 
   "SIMPLE.AttributeKey": "Attribute Key",
   "SIMPLE.AttributeValue": "Value",
-  "SIMPLE.AttributeLabel": "Label",
+  "SIMPLE.AttributeLabel": "Attribute",
   "SIMPLE.AttributeDtype": "Data Type",
 
   "SIMPLE.DeleteGroup": "Delete group?",

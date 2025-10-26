@@ -28,7 +28,7 @@
 
   "SIMPLE.AttributeKey": "Klucz Atrybutu",
   "SIMPLE.AttributeValue": "Wartość",
-  "SIMPLE.AttributeLabel": "Etykieta",
+  "SIMPLE.AttributeLabel": "Atrybut",
   "SIMPLE.AttributeDtype": "Typ Danych",
 
   "SIMPLE.DeleteGroup": "Usunąć grupę?",
